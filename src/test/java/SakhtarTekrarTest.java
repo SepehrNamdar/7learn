@@ -20,6 +20,44 @@ public class SakhtarTekrarTest {
             salamKon();
         }
 
+        tamamKon();
+    }
+
+    // Sakhtar while loop:
+    // int neshanegar = 0;
+    // while ( shart == true ) {
+    //  code
+    //  neshanegar++
+    // }
+
+    @Test
+    void chahar_bar_salam_kon() {
+        int neshanegar = 0;
+        while ( neshanegar < 4 ) {
+            salamKon();
+            neshanegar++;
+        }
+
+        tamamKon();
+    }
+
+    // Sakhtar do while :
+    // do {
+    //  code
+    //  } while ( shart );
+
+    @Test
+    void se_bar_salam_kon() {
+        int neshanegar = 0;
+        do {
+            salamKon();
+            neshanegar++;
+        } while ( neshanegar > 3 );
+
+        tamamKon();
+    }
+
+    private void tamamKon() {
         out.println("Payan");
     }
 
