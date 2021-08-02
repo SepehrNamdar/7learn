@@ -35,21 +35,24 @@ public class SumArraysTest {
     }
 
     private double sumArrays(double[] numbers) {
-        if (numbers.length == 0) {
-            return 0;
-        } else if (numbers.length == 1) {
-            return numbers[0];
-        } else {
-            int index = 0;
-            double sum = 0;
-            while (index < numbers.length) {
-                out.println("Index is : " + index);
-                out.println("The value of array is : " + numbers[index]);
-                sum = sum + numbers[index];
-                out.println("Sum is : " + sum);
-                index++;
-            }
-            return sum;
+        double sum = 0;
+        switch (numbers.length) {
+            case 0:
+                sum = 0;
+                break;
+            case 1:
+                sum = numbers[0];
+                break;
+            default:
+                int index = 0;
+                while (index < numbers.length) {
+                    out.println("Index is : " + index);
+                    out.println("The value of array is : " + numbers[index]);
+                    sum = sum + numbers[index];
+                    out.println("Sum is : " + sum);
+                    index++;
+                }
         }
+        return sum;
     }
 }
